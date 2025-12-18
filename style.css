@@ -1,0 +1,202 @@
+:root {
+    --main-color: #16130e;
+    --highlight-color: #d3ad7f;
+    --bg-color: #010103;
+    --border-color: rgba(255, 255, 0, 0.3);
+    --hover-bg-color: rgba(255, 255, 255, 0.1);
+    --font-family: "Roboto Slab", serif;
+    --transition-time: 0.3s;
+    --icon-size: 2rem;
+    --logo-size: 4rem;
+}
+
+/* Regras Globais */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: var(--transition-time) ease-in-out;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--bg-color); /* Cor de fundo */
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Garante que a página tenha altura total */
+    overflow-x: hidden;
+    
+    /* Imagem de fundo */
+    background-image: url('#'); /* Coloque aqui o link da sua imagem */
+    background-size: cover; /* A imagem vai cobrir toda a área do fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* A imagem de fundo será fixa durante o scroll */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+}
+
+
+
+
+
+
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid var(--highlight-color);
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: var(--logo-size);
+    height: auto;
+}
+
+/* Centralizando a Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar a {
+    margin: 0 1.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    position: relative;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.navbar a:hover {
+    color: var(--highlight-color);
+    font-size: 2rem;
+    background-color: var(--hover-bg-color);
+    border-radius: 4px;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--highlight-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Seção de Imagem, Título e Descrição (inicio) */
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0; /* Ajustado para remover espaço indesejado */
+    background-color: #f8f8f8;
+    flex-grow: 1; /* Garante que a seção ocupe o restante do espaço disponível */
+}
+
+.conteudo-inicio {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.imagem-inicio {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.texto-inicio {
+    max-width: 500px;
+    margin-left: 2rem;
+}
+
+.texto-inicio h1 {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.texto-inicio p {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: var(--main-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 10;
+    margin-top: auto; /* Garante que o footer fique no final da página */
+}
+
+footer p {
+    font-size: 1.6rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .conteudo-inicio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagem-inicio {
+        width: 80%;
+        margin-bottom: 1rem;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .texto-inicio {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+.project i {
+    text-decoration: none;
+
+}
+.project i:hover {
+    text-decoration: underline;
+    color: #d3ad7f;
+
+}
+.navbar i {
+    color: #fff;
+    transform: 50px;
+}
+
+   
